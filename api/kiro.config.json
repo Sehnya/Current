@@ -1,0 +1,843 @@
+{
+  "sources": {
+    "react": {
+      "npm": "react",
+      "docs_url": "https://react.dev",
+      "github": "facebook/react",
+      "language": "JavaScript"
+    },
+    "vue": {
+      "npm": "vue",
+      "docs_url": "https://vuejs.org",
+      "github": "vuejs/core",
+      "language": "JavaScript"
+    },
+    "angular": {
+      "npm": "@angular/core",
+      "docs_url": "https://angular.io",
+      "github": "angular/angular",
+      "language": "TypeScript"
+    },
+    "svelte": {
+      "npm": "svelte",
+      "docs_url": "https://svelte.dev",
+      "github": "sveltejs/svelte",
+      "language": "JavaScript"
+    },
+    "solid": {
+      "npm": "solid-js",
+      "docs_url": "https://solidjs.com",
+      "github": "solidjs/solid",
+      "language": "JavaScript"
+    },
+    "nextjs": {
+      "npm": "next",
+      "docs_url": "https://nextjs.org",
+      "github": "vercel/next.js",
+      "language": "JavaScript"
+    },
+    "nuxt": {
+      "npm": "nuxt",
+      "docs_url": "https://nuxt.com",
+      "github": "nuxt/nuxt",
+      "language": "JavaScript"
+    },
+    "sveltekit": {
+      "npm": "@sveltejs/kit",
+      "docs_url": "https://kit.svelte.dev",
+      "github": "sveltejs/kit",
+      "language": "JavaScript"
+    },
+    "remix": {
+      "npm": "@remix-run/react",
+      "docs_url": "https://remix.run",
+      "github": "remix-run/remix",
+      "language": "JavaScript"
+    },
+    "astro": {
+      "npm": "astro",
+      "docs_url": "https://astro.build",
+      "github": "withastro/astro",
+      "language": "JavaScript"
+    },
+    "gatsby": {
+      "npm": "gatsby",
+      "docs_url": "https://gatsbyjs.com",
+      "github": "gatsbyjs/gatsby",
+      "language": "JavaScript"
+    },
+    "express": {
+      "npm": "express",
+      "docs_url": "https://expressjs.com",
+      "github": "expressjs/express",
+      "language": "JavaScript"
+    },
+    "fastify": {
+      "npm": "fastify",
+      "docs_url": "https://fastify.dev",
+      "github": "fastify/fastify",
+      "language": "JavaScript"
+    },
+    "nestjs": {
+      "npm": "@nestjs/core",
+      "docs_url": "https://nestjs.com",
+      "github": "nestjs/nest",
+      "language": "TypeScript"
+    },
+    "koa": {
+      "npm": "koa",
+      "docs_url": "https://koajs.com",
+      "github": "koajs/koa",
+      "language": "JavaScript"
+    },
+    "hapi": {
+      "npm": "@hapi/hapi",
+      "docs_url": "https://hapi.dev",
+      "github": "hapijs/hapi",
+      "language": "JavaScript"
+    },
+    "flask": {
+      "pypi": "flask",
+      "docs_url": "https://flask.palletsprojects.com",
+      "github": "pallets/flask",
+      "language": "Python"
+    },
+    "django": {
+      "pypi": "django",
+      "docs_url": "https://djangoproject.com",
+      "github": "django/django",
+      "language": "Python"
+    },
+    "fastapi": {
+      "pypi": "fastapi",
+      "docs_url": "https://fastapi.tiangolo.com",
+      "github": "tiangolo/fastapi",
+      "language": "Python"
+    },
+    "starlette": {
+      "pypi": "starlette",
+      "docs_url": "https://starlette.io",
+      "github": "encode/starlette",
+      "language": "Python"
+    },
+    "tornado": {
+      "pypi": "tornado",
+      "docs_url": "https://tornadoweb.org",
+      "github": "tornadoweb/tornado",
+      "language": "Python"
+    },
+    "aiohttp": {
+      "pypi": "aiohttp",
+      "docs_url": "https://docs.aiohttp.org",
+      "github": "aio-libs/aiohttp",
+      "language": "Python"
+    },
+    "quart": {
+      "pypi": "quart",
+      "docs_url": "https://quart.palletsprojects.com",
+      "github": "pallets/quart",
+      "language": "Python"
+    },
+    "sanic": {
+      "pypi": "sanic",
+      "docs_url": "https://sanic.dev",
+      "github": "sanic-org/sanic",
+      "language": "Python"
+    },
+    "requests": {
+      "pypi": "requests",
+      "docs_url": "https://requests.readthedocs.io",
+      "github": "psf/requests",
+      "language": "Python"
+    },
+    "httpx": {
+      "pypi": "httpx",
+      "docs_url": "https://httpx.encode.io",
+      "github": "encode/httpx",
+      "language": "Python"
+    },
+    "pandas": {
+      "pypi": "pandas",
+      "docs_url": "https://pandas.pydata.org",
+      "github": "pandas-dev/pandas",
+      "language": "Python"
+    },
+    "numpy": {
+      "pypi": "numpy",
+      "docs_url": "https://numpy.org",
+      "github": "numpy/numpy",
+      "language": "Python"
+    },
+    "scikit-learn": {
+      "pypi": "scikit-learn",
+      "docs_url": "https://scikit-learn.org",
+      "github": "scikit-learn/scikit-learn",
+      "language": "Python"
+    },
+    "tensorflow": {
+      "pypi": "tensorflow",
+      "docs_url": "https://tensorflow.org",
+      "github": "tensorflow/tensorflow",
+      "language": "Python"
+    },
+    "pytorch": {
+      "pypi": "torch",
+      "docs_url": "https://pytorch.org",
+      "github": "pytorch/pytorch",
+      "language": "Python"
+    },
+    "matplotlib": {
+      "pypi": "matplotlib",
+      "docs_url": "https://matplotlib.org",
+      "github": "matplotlib/matplotlib",
+      "language": "Python"
+    },
+    "seaborn": {
+      "pypi": "seaborn",
+      "docs_url": "https://seaborn.pydata.org",
+      "github": "mwaskom/seaborn",
+      "language": "Python"
+    },
+    "plotly": {
+      "pypi": "plotly",
+      "docs_url": "https://plotly.com/python",
+      "github": "plotly/plotly.py",
+      "language": "Python"
+    },
+    "streamlit": {
+      "pypi": "streamlit",
+      "docs_url": "https://streamlit.io",
+      "github": "streamlit/streamlit",
+      "language": "Python"
+    },
+    "gradio": {
+      "pypi": "gradio",
+      "docs_url": "https://gradio.app",
+      "github": "gradio-app/gradio",
+      "language": "Python"
+    },
+    "pydantic": {
+      "pypi": "pydantic",
+      "docs_url": "https://pydantic.dev",
+      "github": "pydantic/pydantic",
+      "language": "Python"
+    },
+    "sqlalchemy": {
+      "pypi": "sqlalchemy",
+      "docs_url": "https://sqlalchemy.org",
+      "github": "sqlalchemy/sqlalchemy",
+      "language": "Python"
+    },
+    "alembic": {
+      "pypi": "alembic",
+      "docs_url": "https://alembic.sqlalchemy.org",
+      "github": "sqlalchemy/alembic",
+      "language": "Python"
+    },
+    "celery": {
+      "pypi": "celery",
+      "docs_url": "https://celeryq.dev",
+      "github": "celery/celery",
+      "language": "Python"
+    },
+    "redis-py": {
+      "pypi": "redis",
+      "docs_url": "https://redis-py.readthedocs.io",
+      "github": "redis/redis-py",
+      "language": "Python"
+    },
+    "tailwindcss": {
+      "npm": "tailwindcss",
+      "docs_url": "https://tailwindcss.com",
+      "github": "tailwindlabs/tailwindcss",
+      "language": "CSS"
+    },
+    "bootstrap": {
+      "npm": "bootstrap",
+      "docs_url": "https://getbootstrap.com",
+      "github": "twbs/bootstrap",
+      "language": "CSS"
+    },
+    "bulma": {
+      "npm": "bulma",
+      "docs_url": "https://bulma.io",
+      "github": "jgthms/bulma",
+      "language": "CSS"
+    },
+    "chakra-ui": {
+      "npm": "@chakra-ui/react",
+      "docs_url": "https://chakra-ui.com",
+      "github": "chakra-ui/chakra-ui",
+      "language": "JavaScript"
+    },
+    "material-ui": {
+      "npm": "@mui/material",
+      "docs_url": "https://mui.com",
+      "github": "mui/material-ui",
+      "language": "JavaScript"
+    },
+    "ant-design": {
+      "npm": "antd",
+      "docs_url": "https://ant.design",
+      "github": "ant-design/ant-design",
+      "language": "JavaScript"
+    },
+    "mantine": {
+      "npm": "@mantine/core",
+      "docs_url": "https://mantine.dev",
+      "github": "mantinedev/mantine",
+      "language": "JavaScript"
+    },
+    "headlessui": {
+      "npm": "@headlessui/react",
+      "docs_url": "https://headlessui.com",
+      "github": "tailwindlabs/headlessui",
+      "language": "JavaScript"
+    },
+    "prisma": {
+      "npm": "prisma",
+      "docs_url": "https://prisma.io",
+      "github": "prisma/prisma",
+      "language": "TypeScript"
+    },
+    "drizzle": {
+      "npm": "drizzle-orm",
+      "docs_url": "https://orm.drizzle.team",
+      "github": "drizzle-team/drizzle-orm",
+      "language": "TypeScript"
+    },
+    "typeorm": {
+      "npm": "typeorm",
+      "docs_url": "https://typeorm.io",
+      "github": "typeorm/typeorm",
+      "language": "TypeScript"
+    },
+    "sequelize": {
+      "npm": "sequelize",
+      "docs_url": "https://sequelize.org",
+      "github": "sequelize/sequelize",
+      "language": "JavaScript"
+    },
+    "mongoose": {
+      "npm": "mongoose",
+      "docs_url": "https://mongoosejs.com",
+      "github": "Automattic/mongoose",
+      "language": "JavaScript"
+    },
+    "knex": {
+      "npm": "knex",
+      "docs_url": "https://knexjs.org",
+      "github": "knex/knex",
+      "language": "JavaScript"
+    },
+    "lodash": {
+      "npm": "lodash",
+      "docs_url": "https://lodash.com",
+      "github": "lodash/lodash",
+      "language": "JavaScript"
+    },
+    "ramda": {
+      "npm": "ramda",
+      "docs_url": "https://ramdajs.com",
+      "github": "ramda/ramda",
+      "language": "JavaScript"
+    },
+    "rxjs": {
+      "npm": "rxjs",
+      "docs_url": "https://rxjs.dev",
+      "github": "ReactiveX/rxjs",
+      "language": "JavaScript"
+    },
+    "axios": {
+      "npm": "axios",
+      "docs_url": "https://axios-http.com",
+      "github": "axios/axios",
+      "language": "JavaScript"
+    },
+    "fetch": {
+      "npm": "node-fetch",
+      "docs_url": "https://github.com/node-fetch/node-fetch",
+      "github": "node-fetch/node-fetch",
+      "language": "JavaScript"
+    },
+    "jest": {
+      "npm": "jest",
+      "docs_url": "https://jestjs.io",
+      "github": "jestjs/jest",
+      "language": "JavaScript"
+    },
+    "vitest": {
+      "npm": "vitest",
+      "docs_url": "https://vitest.dev",
+      "github": "vitest-dev/vitest",
+      "language": "JavaScript"
+    },
+    "cypress": {
+      "npm": "cypress",
+      "docs_url": "https://cypress.io",
+      "github": "cypress-io/cypress",
+      "language": "JavaScript"
+    },
+    "playwright": {
+      "npm": "playwright",
+      "docs_url": "https://playwright.dev",
+      "github": "microsoft/playwright",
+      "language": "JavaScript"
+    },
+    "testing-library": {
+      "npm": "@testing-library/react",
+      "docs_url": "https://testing-library.com",
+      "github": "testing-library/react-testing-library",
+      "language": "JavaScript"
+    },
+    "storybook": {
+      "npm": "storybook",
+      "docs_url": "https://storybook.js.org",
+      "github": "storybookjs/storybook",
+      "language": "JavaScript"
+    },
+    "webpack": {
+      "npm": "webpack",
+      "docs_url": "https://webpack.js.org",
+      "github": "webpack/webpack",
+      "language": "JavaScript"
+    },
+    "vite": {
+      "npm": "vite",
+      "docs_url": "https://vitejs.dev",
+      "github": "vitejs/vite",
+      "language": "JavaScript"
+    },
+    "rollup": {
+      "npm": "rollup",
+      "docs_url": "https://rollupjs.org",
+      "github": "rollup/rollup",
+      "language": "JavaScript"
+    },
+    "parcel": {
+      "npm": "parcel",
+      "docs_url": "https://parceljs.org",
+      "github": "parcel-bundler/parcel",
+      "language": "JavaScript"
+    },
+    "esbuild": {
+      "npm": "esbuild",
+      "docs_url": "https://esbuild.github.io",
+      "github": "evanw/esbuild",
+      "language": "JavaScript"
+    },
+    "turbo": {
+      "npm": "turbo",
+      "docs_url": "https://turbo.build",
+      "github": "vercel/turbo",
+      "language": "JavaScript"
+    },
+    "lerna": {
+      "npm": "lerna",
+      "docs_url": "https://lerna.js.org",
+      "github": "lerna/lerna",
+      "language": "JavaScript"
+    },
+    "nx": {
+      "npm": "nx",
+      "docs_url": "https://nx.dev",
+      "github": "nrwl/nx",
+      "language": "JavaScript"
+    },
+    "eslint": {
+      "npm": "eslint",
+      "docs_url": "https://eslint.org",
+      "github": "eslint/eslint",
+      "language": "JavaScript"
+    },
+    "prettier": {
+      "npm": "prettier",
+      "docs_url": "https://prettier.io",
+      "github": "prettier/prettier",
+      "language": "JavaScript"
+    },
+    "typescript": {
+      "npm": "typescript",
+      "docs_url": "https://typescriptlang.org",
+      "github": "microsoft/TypeScript",
+      "language": "TypeScript"
+    },
+    "babel": {
+      "npm": "@babel/core",
+      "docs_url": "https://babeljs.io",
+      "github": "babel/babel",
+      "language": "JavaScript"
+    },
+    "postcss": {
+      "npm": "postcss",
+      "docs_url": "https://postcss.org",
+      "github": "postcss/postcss",
+      "language": "JavaScript"
+    },
+    "sass": {
+      "npm": "sass",
+      "docs_url": "https://sass-lang.com",
+      "github": "sass/dart-sass",
+      "language": "CSS"
+    },
+    "less": {
+      "npm": "less",
+      "docs_url": "https://lesscss.org",
+      "github": "less/less.js",
+      "language": "CSS"
+    },
+    "styled-components": {
+      "npm": "styled-components",
+      "docs_url": "https://styled-components.com",
+      "github": "styled-components/styled-components",
+      "language": "JavaScript"
+    },
+    "emotion": {
+      "npm": "@emotion/react",
+      "docs_url": "https://emotion.sh",
+      "github": "emotion-js/emotion",
+      "language": "JavaScript"
+    },
+    "framer-motion": {
+      "npm": "framer-motion",
+      "docs_url": "https://framer.com/motion",
+      "github": "framer/motion",
+      "language": "JavaScript"
+    },
+    "three": {
+      "npm": "three",
+      "docs_url": "https://threejs.org",
+      "github": "mrdoob/three.js",
+      "language": "JavaScript"
+    },
+    "d3": {
+      "npm": "d3",
+      "docs_url": "https://d3js.org",
+      "github": "d3/d3",
+      "language": "JavaScript"
+    },
+    "chart": {
+      "npm": "chart.js",
+      "docs_url": "https://chartjs.org",
+      "github": "chartjs/Chart.js",
+      "language": "JavaScript"
+    },
+    "leaflet": {
+      "npm": "leaflet",
+      "docs_url": "https://leafletjs.com",
+      "github": "Leaflet/Leaflet",
+      "language": "JavaScript"
+    },
+    "socket-io": {
+      "npm": "socket.io",
+      "docs_url": "https://socket.io",
+      "github": "socketio/socket.io",
+      "language": "JavaScript"
+    },
+    "ws": {
+      "npm": "ws",
+      "docs_url": "https://github.com/websockets/ws",
+      "github": "websockets/ws",
+      "language": "JavaScript"
+    },
+    "graphql": {
+      "npm": "graphql",
+      "docs_url": "https://graphql.org",
+      "github": "graphql/graphql-js",
+      "language": "JavaScript"
+    },
+    "apollo-server": {
+      "npm": "apollo-server-express",
+      "docs_url": "https://apollographql.com/docs/apollo-server",
+      "github": "apollographql/apollo-server",
+      "language": "JavaScript"
+    },
+    "apollo-client": {
+      "npm": "@apollo/client",
+      "docs_url": "https://apollographql.com/docs/react",
+      "github": "apollographql/apollo-client",
+      "language": "JavaScript"
+    },
+    "relay": {
+      "npm": "react-relay",
+      "docs_url": "https://relay.dev",
+      "github": "facebook/relay",
+      "language": "JavaScript"
+    },
+    "urql": {
+      "npm": "urql",
+      "docs_url": "https://formidable.com/open-source/urql",
+      "github": "urql-graphql/urql",
+      "language": "JavaScript"
+    },
+    "zustand": {
+      "npm": "zustand",
+      "docs_url": "https://zustand-demo.pmnd.rs",
+      "github": "pmndrs/zustand",
+      "language": "JavaScript"
+    },
+    "redux": {
+      "npm": "redux",
+      "docs_url": "https://redux.js.org",
+      "github": "reduxjs/redux",
+      "language": "JavaScript"
+    },
+    "redux-toolkit": {
+      "npm": "@reduxjs/toolkit",
+      "docs_url": "https://redux-toolkit.js.org",
+      "github": "reduxjs/redux-toolkit",
+      "language": "JavaScript"
+    },
+    "mobx": {
+      "npm": "mobx",
+      "docs_url": "https://mobx.js.org",
+      "github": "mobxjs/mobx",
+      "language": "JavaScript"
+    },
+    "recoil": {
+      "npm": "recoil",
+      "docs_url": "https://recoiljs.org",
+      "github": "facebookexperimental/Recoil",
+      "language": "JavaScript"
+    },
+    "jotai": {
+      "npm": "jotai",
+      "docs_url": "https://jotai.org",
+      "github": "pmndrs/jotai",
+      "language": "JavaScript"
+    },
+    "valtio": {
+      "npm": "valtio",
+      "docs_url": "https://valtio.pmnd.rs",
+      "github": "pmndrs/valtio",
+      "language": "JavaScript"
+    },
+    "react-query": {
+      "npm": "@tanstack/react-query",
+      "docs_url": "https://tanstack.com/query",
+      "github": "TanStack/query",
+      "language": "JavaScript"
+    },
+    "swr": {
+      "npm": "swr",
+      "docs_url": "https://swr.vercel.app",
+      "github": "vercel/swr",
+      "language": "JavaScript"
+    },
+    "react-router": {
+      "npm": "react-router-dom",
+      "docs_url": "https://reactrouter.com",
+      "github": "remix-run/react-router",
+      "language": "JavaScript"
+    },
+    "vue-router": {
+      "npm": "vue-router",
+      "docs_url": "https://router.vuejs.org",
+      "github": "vuejs/router",
+      "language": "JavaScript"
+    },
+    "react-hook-form": {
+      "npm": "react-hook-form",
+      "docs_url": "https://react-hook-form.com",
+      "github": "react-hook-form/react-hook-form",
+      "language": "JavaScript"
+    },
+    "formik": {
+      "npm": "formik",
+      "docs_url": "https://formik.org",
+      "github": "jaredpalmer/formik",
+      "language": "JavaScript"
+    },
+    "yup": {
+      "npm": "yup",
+      "docs_url": "https://github.com/jquense/yup",
+      "github": "jquense/yup",
+      "language": "JavaScript"
+    },
+    "zod": {
+      "npm": "zod",
+      "docs_url": "https://zod.dev",
+      "github": "colinhacks/zod",
+      "language": "TypeScript"
+    },
+    "joi": {
+      "npm": "joi",
+      "docs_url": "https://joi.dev",
+      "github": "sideway/joi",
+      "language": "JavaScript"
+    },
+    "bun": {
+      "github": "oven-sh/bun",
+      "docs_url": "https://bun.sh",
+      "language": "JavaScript"
+    },
+    "deno": {
+      "github": "denoland/deno",
+      "docs_url": "https://deno.land",
+      "language": "JavaScript"
+    },
+    "node": {
+      "github": "nodejs/node",
+      "docs_url": "https://nodejs.org",
+      "language": "JavaScript"
+    },
+    "pnpm": {
+      "npm": "pnpm",
+      "docs_url": "https://pnpm.io",
+      "github": "pnpm/pnpm",
+      "language": "JavaScript"
+    },
+    "yarn": {
+      "npm": "yarn",
+      "docs_url": "https://yarnpkg.com",
+      "github": "yarnpkg/yarn",
+      "language": "JavaScript"
+    },
+    "npm": {
+      "npm": "npm",
+      "docs_url": "https://npmjs.com",
+      "github": "npm/cli",
+      "language": "JavaScript"
+    }
+  },
+  "categories": {
+    "react": "frontend",
+    "vue": "frontend",
+    "angular": "frontend",
+    "svelte": "frontend",
+    "solid": "frontend",
+    "nextjs": "frontend",
+    "nuxt": "frontend",
+    "sveltekit": "frontend",
+    "remix": "frontend",
+    "astro": "frontend",
+    "gatsby": "frontend",
+    "express": "backend",
+    "fastify": "backend",
+    "nestjs": "backend",
+    "koa": "backend",
+    "hapi": "backend",
+    "flask": "backend",
+    "django": "backend",
+    "fastapi": "backend",
+    "starlette": "backend",
+    "tornado": "backend",
+    "aiohttp": "backend",
+    "quart": "backend",
+    "sanic": "backend",
+    "requests": "networking",
+    "httpx": "networking",
+    "pandas": "data-science",
+    "numpy": "data-science",
+    "scikit-learn": "data-science",
+    "tensorflow": "data-science",
+    "pytorch": "data-science",
+    "matplotlib": "visualization",
+    "seaborn": "visualization",
+    "plotly": "visualization",
+    "streamlit": "ml-apps",
+    "gradio": "ml-apps",
+    "pydantic": "validation",
+    "sqlalchemy": "database",
+    "alembic": "database",
+    "celery": "backend",
+    "redis-py": "database",
+    "tailwindcss": "styling",
+    "bootstrap": "styling",
+    "bulma": "styling",
+    "chakra-ui": "styling",
+    "material-ui": "styling",
+    "ant-design": "styling",
+    "mantine": "styling",
+    "headlessui": "styling",
+    "prisma": "database",
+    "drizzle": "database",
+    "typeorm": "database",
+    "sequelize": "database",
+    "mongoose": "database",
+    "knex": "database",
+    "lodash": "utility",
+    "ramda": "utility",
+    "rxjs": "utility",
+    "axios": "networking",
+    "fetch": "networking",
+    "jest": "testing",
+    "vitest": "testing",
+    "cypress": "testing",
+    "playwright": "testing",
+    "testing-library": "testing",
+    "storybook": "testing",
+    "webpack": "build-tools",
+    "vite": "build-tools",
+    "rollup": "build-tools",
+    "parcel": "build-tools",
+    "esbuild": "build-tools",
+    "turbo": "monorepo",
+    "lerna": "monorepo",
+    "nx": "monorepo",
+    "eslint": "code-quality",
+    "prettier": "code-quality",
+    "typescript": "code-quality",
+    "babel": "build-tools",
+    "postcss": "build-tools",
+    "sass": "styling",
+    "less": "styling",
+    "styled-components": "styling",
+    "emotion": "styling",
+    "framer-motion": "animation",
+    "three": "animation",
+    "d3": "visualization",
+    "chart": "visualization",
+    "leaflet": "visualization",
+    "socket-io": "realtime",
+    "ws": "realtime",
+    "graphql": "graphql",
+    "apollo-server": "graphql",
+    "apollo-client": "graphql",
+    "relay": "graphql",
+    "urql": "graphql",
+    "zustand": "state-management",
+    "redux": "state-management",
+    "redux-toolkit": "state-management",
+    "mobx": "state-management",
+    "recoil": "state-management",
+    "jotai": "state-management",
+    "valtio": "state-management",
+    "react-query": "state-management",
+    "swr": "state-management",
+    "react-router": "routing",
+    "vue-router": "routing",
+    "react-hook-form": "forms",
+    "formik": "forms",
+    "yup": "validation",
+    "zod": "validation",
+    "joi": "validation",
+    "bun": "runtime",
+    "deno": "runtime",
+    "node": "runtime",
+    "pnpm": "package-manager",
+    "yarn": "package-manager",
+    "npm": "package-manager"
+  },
+  "fast_moving_stacks": [
+    "react",
+    "vue",
+    "angular",
+    "nextjs",
+    "nuxt",
+    "vite",
+    "typescript",
+    "fastapi",
+    "django",
+    "tailwindcss",
+    "prisma",
+    "bun",
+    "deno"
+  ],
+  "scheduler": {
+    "enabled": true,
+    "cron": "0 0 * * 0",
+    "daily_cron": "0 2 * * *",
+    "timezone": "UTC"
+  }
+}
