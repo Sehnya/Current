@@ -201,7 +201,17 @@ async def refresh_stacks(fast_only: bool = False):
 @app.get("/health")
 async def health_check():
     """Health check endpoint"""
-    return {"status": "healthy", "timestamp": datetime.now()}
+    try:
+        # Test database connection by loading stacks
+        stacks = storage.load_stacks()
+        return {
+            "status": "healthy", 
+            "timestamp": datetime.now(),
+            "stacks_count": len(stacks),
+            "version": "2.0.0"
+        }
+    except Exception as e:
+        raise HTTPException(status_code=503, detail=f"Service unhealthy: {str(e)}")
 
 if __name__ == "__main__":
     import uvicorn
