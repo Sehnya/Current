@@ -1,0 +1,6 @@
+docker-compose*.yml
+docker-compose*.yaml
+*.bak
+.git
+node_modules
+.next
