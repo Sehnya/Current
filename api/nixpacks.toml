@@ -7,7 +7,7 @@ cmds = [
 ]
 
 [phases.build]
-cmds = ['mkdir -p data']
+cmds = ['mkdir -p data', 'ls -la /app', 'pwd', 'which python3']
 
 [start]
-cmd = 'python3 -m uvicorn main:app --host 0.0.0.0 --port ${PORT:-8000}'
+cmd = 'cd /app && python3 -m uvicorn main:app --host 0.0.0.0 --port ${PORT:-8000}'
