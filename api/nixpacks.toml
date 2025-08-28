@@ -8,7 +8,12 @@ cmds = [
 ]
 
 [phases.build]
-cmds = ['mkdir -p data']
+cmds = [
+  'mkdir -p data',
+  'python -c "import uvicorn; print(f\"Uvicorn installed at: {uvicorn.__file__}\")"',
+  'which python',
+  'python --version'
+]
 
 [start]
-cmd = 'python -m uvicorn main:app --host 0.0.0.0 --port $PORT'
+cmd = 'python start_server.py'
