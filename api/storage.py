@@ -21,8 +21,14 @@ class JSONStorage:
     
     def ensure_file_exists(self):
         """Create empty storage file if it doesn't exist"""
-        if not os.path.exists(self.file_path):
-            self.save_stacks({})
+        try:
+            if not os.path.exists(self.file_path):
+                # Ensure directory exists
+                os.makedirs(os.path.dirname(self.file_path), exist_ok=True)
+                self.save_stacks({})
+        except Exception as e:
+            print(f"Warning: Could not create storage file: {e}")
+            # Continue anyway - the app can still function
     
     def load_stacks(self) -> Dict[str, Stack]:
         """Load stacks from JSON file"""
@@ -153,11 +159,14 @@ class JSONStorage:
     def get_metadata(self) -> Dict:
         """Get storage metadata"""
         try:
-            with open(self.file_path, 'r') as f:
-                data = json.load(f)
-                return {
-                    'last_updated': data.get('last_updated'),
-                    'total_count': data.get('total_count', 0)
-                }
-        except:
-            return {'last_updated': None, 'total_count': 0}
+            if os.path.exists(self.file_path):
+                with open(self.file_path, 'r') as f:
+                    data = json.load(f)
+                    return {
+                        'last_updated': data.get('last_updated'),
+                        'total_count': data.get('total_count', 0)
+                    }
+        except Exception as e:
+            print(f"Warning: Could not read metadata: {e}")
+        
+        return {'last_updated': None, 'total_count': 0}
