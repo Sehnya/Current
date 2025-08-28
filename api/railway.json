@@ -7,7 +7,7 @@
     "numReplicas": 1,
     "sleepApplication": false,
     "restartPolicyType": "ON_FAILURE",
-    "startCommand": "cd /app && python3 -m uvicorn main:app --host 0.0.0.0 --port $PORT",
+    "startCommand": "python run_server.py",
     "healthcheckPath": "/ready",
     "healthcheckTimeout": 300
   }

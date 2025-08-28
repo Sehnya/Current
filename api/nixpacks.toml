@@ -10,4 +10,4 @@ cmds = [
 cmds = ['mkdir -p data', 'ls -la /app', 'pwd', 'which python3']
 
 [start]
-cmd = 'cd /app && python3 -m uvicorn main:app --host 0.0.0.0 --port ${PORT:-8000}'
+cmd = 'python run_server.py'

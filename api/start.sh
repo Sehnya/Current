@@ -20,6 +20,6 @@ echo "🔍 Looking for uvicorn..."
 UVICORN_PATH=$(python -m pip show uvicorn | grep Location | cut -d' ' -f2)
 echo "📍 Uvicorn location: $UVICORN_PATH"
 
-# Start the application using python -m uvicorn (more reliable)
-echo "🚀 Starting uvicorn server..."
-exec python -m uvicorn main:app --host 0.0.0.0 --port $PORT --log-level info
+# Start the application using run_server.py
+echo "🚀 Starting server..."
+exec python run_server.py
