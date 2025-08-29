@@ -2,16 +2,15 @@ version: "3.8"
 
 services:
   api:
-    build: ./api
+    build: ./app
     ports:
       - "8000:8000"
     environment:
       - PORT=8000
-      - DATA_PATH=/app/data/stacks.json
-      - HISTORY_PATH=/app/data/history.json
+      - RAILWAY_ENVIRONMENT=development
     volumes:
       - api_data:/app/data
-    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+    command: python run_server.py
 
   web:
     build: ./web

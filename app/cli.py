@@ -12,13 +12,13 @@ from datetime import datetime, timedelta
 from typing import Optional, List, Dict, Any
 import requests
 from crawler import StackCrawler
-from storage import StackStorage
+from storage import JSONStorage
 from models import Stack
 
 
 class CurrentCLI:
     def __init__(self):
-        self.storage = StackStorage()
+        self.storage = JSONStorage()
         self.crawler = StackCrawler()
     
     def load_config(self) -> Dict[str, Any]:

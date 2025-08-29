@@ -8,33 +8,21 @@ class JSONStorage:
     """Enhanced JSON file storage with historical data support"""
     
     def __init__(self, file_path: str = "stacks_data.json"):
-        # Handle Railway deployment - use environment variables for paths
+        """Initialize storage with Railway-friendly paths"""
         import os
         
-        # Use environment variables for data paths, defaulting to local files for development
-        if os.getenv("RAILWAY_ENVIRONMENT") or os.getenv("DATA_PATH"):
-            # Production/Railway environment
-            data_path = os.getenv("DATA_PATH", "/data/stacks.json")
-            history_path = os.getenv("HISTORY_PATH", "/data/history.json")
+        # Simplified path logic for Railway
+        # Railway runs from /app directory, so use /app/data for persistence
+        if os.getenv("RAILWAY_ENVIRONMENT"):
+            # Railway production environment
+            data_path = "/app/data/stacks.json"
+            history_path = "/app/data/history.json"
+            # Ensure data directory exists
+            os.makedirs("/app/data", exist_ok=True)
         else:
-            # Local development environment
+            # Local development - use current directory
             data_path = "stacks_data.json"
             history_path = "history.json"
-        
-        # Create directories if they don't exist (and we have permission)
-        try:
-            data_dir = os.path.dirname(data_path)
-            history_dir = os.path.dirname(history_path)
-            if data_dir:  # Only create if there's actually a directory
-                os.makedirs(data_dir, exist_ok=True)
-            if history_dir:  # Only create if there's actually a directory
-                os.makedirs(history_dir, exist_ok=True)
-        except (OSError, PermissionError) as e:
-            print(f"Warning: Could not create data directories: {e}")
-            # Fall back to current directory for local development
-            if not os.getenv("RAILWAY_ENVIRONMENT"):
-                data_path = os.path.basename(data_path)
-                history_path = os.path.basename(history_path)
         
         self.file_path = data_path
         self.history_path = history_path
@@ -44,8 +32,6 @@ class JSONStorage:
         """Create empty storage file if it doesn't exist"""
         try:
             if not os.path.exists(self.file_path):
-                # Ensure directory exists
-                os.makedirs(os.path.dirname(self.file_path), exist_ok=True)
                 self.save_stacks({})
         except Exception as e:
             print(f"Warning: Could not create storage file: {e}")

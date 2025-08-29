@@ -36,8 +36,8 @@ def test_api():
     print("🧪 API test complete!")
 
 if __name__ == "__main__":
-    # Change to API directory
-    os.chdir("api")
+    # Change to app directory
+    os.chdir("app")
     
     # Start server
     print("🚀 Starting API server...")

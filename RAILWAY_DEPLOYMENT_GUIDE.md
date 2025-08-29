@@ -27,7 +27,7 @@ Railway will automatically detect the `railway.toml` configuration and deploy bo
 ```
 current/
 ├── railway.toml          # Monorepo configuration
-├── api/                  # FastAPI backend
+├── app/                  # FastAPI backend
 │   ├── Dockerfile       # Container config
 │   ├── Procfile         # Fallback start command
 │   └── requirements.txt # Python dependencies

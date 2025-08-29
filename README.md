@@ -37,7 +37,7 @@ A beautiful, comprehensive system for tracking and discovering popular developme
 
 ```
 current/
-├── api/                 # FastAPI backend
+├── app/                 # FastAPI backend
 │   ├── main.py         # API server
 │   ├── crawler.py      # Stack data crawler
 │   ├── storage.py      # Data persistence
@@ -92,10 +92,10 @@ current/
 #### Backend (API)
 
 ```bash
-cd api
+cd app
 pip install -r requirements.txt
 python cli.py update-stacks  # Initial data crawl
-uvicorn main:app --reload
+python run_server.py
 ```
 
 #### Frontend (Web)
@@ -162,19 +162,19 @@ curl http://localhost:8000/stacks/category/database
 
 ```bash
 # Update all stacks
-python api/cli.py update-stacks
+python app/cli.py update-stacks
 
 # Update only fast-moving stacks
-python api/cli.py update-stacks --fast
+python app/cli.py update-stacks --fast
 
 # Search stacks
-python api/cli.py search tailwind
+python app/cli.py search tailwind
 
 # Show trending stacks
-python api/cli.py trending --sort-by downloads --limit 10
+python app/cli.py trending --sort-by downloads --limit 10
 
 # Add new stack interactively
-python api/cli.py add-stack
+python app/cli.py add-stack
 ```
 
 ## 🌊 Pages & Features
@@ -220,7 +220,7 @@ docker-compose up --scale api=2 --scale web=2
 
 ### Railway/Vercel
 
-- **API**: Deploy `api/` folder to Railway
+- **API**: Deploy `app/` folder to Railway
 - **Web**: Deploy `web/` folder to Vercel
 - Set environment variables for API URL
 
@@ -236,7 +236,7 @@ docker-compose up --scale api=2 --scale web=2
 
 ```bash
 # Interactive CLI
-python api/cli.py add-stack
+python app/cli.py add-stack
 
 # Or edit shared/config.json manually
 ```
