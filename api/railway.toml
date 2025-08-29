@@ -10,4 +10,4 @@ startCommand = "python run_server.py"
 
 [variables]
 PORT = "8000"
-PYTHONPATH = "/app"
+PYTHONPATH = "/api"
