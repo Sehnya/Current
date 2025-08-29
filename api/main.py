@@ -2,6 +2,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from datetime import datetime
 from typing import Dict, Any
+import os
 
 from models import (
     Stack, StackResponse, RefreshResponse, CategoryResponse, 
@@ -18,9 +19,10 @@ app = FastAPI(
 )
 
 # Add CORS middleware for frontend
+FRONTEND_ORIGIN = os.getenv("FRONTEND_ORIGIN", "*")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "https://current.dev"],
+    allow_origins=[FRONTEND_ORIGIN, "http://localhost:3000", "*"],  # keep * during bring-up; tighten later
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

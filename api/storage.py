@@ -8,15 +8,36 @@ class JSONStorage:
     """Enhanced JSON file storage with historical data support"""
     
     def __init__(self, file_path: str = "stacks_data.json"):
-        # Handle Railway deployment - use persistent volume if available
+        # Handle Railway deployment - use environment variables for paths
         import os
-        if os.environ.get('RAILWAY_ENVIRONMENT'):
-            # Use /app/data for persistent storage on Railway
-            data_dir = "/app/data"
-            os.makedirs(data_dir, exist_ok=True)
-            self.file_path = os.path.join(data_dir, file_path)
+        
+        # Use environment variables for data paths, defaulting to local files for development
+        if os.getenv("RAILWAY_ENVIRONMENT") or os.getenv("DATA_PATH"):
+            # Production/Railway environment
+            data_path = os.getenv("DATA_PATH", "/data/stacks.json")
+            history_path = os.getenv("HISTORY_PATH", "/data/history.json")
         else:
-            self.file_path = file_path
+            # Local development environment
+            data_path = "stacks_data.json"
+            history_path = "history.json"
+        
+        # Create directories if they don't exist (and we have permission)
+        try:
+            data_dir = os.path.dirname(data_path)
+            history_dir = os.path.dirname(history_path)
+            if data_dir:  # Only create if there's actually a directory
+                os.makedirs(data_dir, exist_ok=True)
+            if history_dir:  # Only create if there's actually a directory
+                os.makedirs(history_dir, exist_ok=True)
+        except (OSError, PermissionError) as e:
+            print(f"Warning: Could not create data directories: {e}")
+            # Fall back to current directory for local development
+            if not os.getenv("RAILWAY_ENVIRONMENT"):
+                data_path = os.path.basename(data_path)
+                history_path = os.path.basename(history_path)
+        
+        self.file_path = data_path
+        self.history_path = history_path
         self.ensure_file_exists()
     
     def ensure_file_exists(self):

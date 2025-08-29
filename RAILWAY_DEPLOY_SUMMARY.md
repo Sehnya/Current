@@ -44,13 +44,13 @@ cmds = [
 ]
 
 [start]
-cmd = 'python -m uvicorn main:app --host 0.0.0.0 --port $PORT'
+cmd = 'python run_server.py'
 ```
 
 ### 4. `api/Procfile` - Backup Configuration
 
 ```
-web: python -m uvicorn main:app --host 0.0.0.0 --port $PORT
+web: python run_server.py
 ```
 
 ## 🚀 Deployment Steps

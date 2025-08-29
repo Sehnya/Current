@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  api:
+    build: ./api
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+      - DATA_PATH=/app/data/stacks.json
+      - HISTORY_PATH=/app/data/history.json
+    volumes:
+      - api_data:/app/data
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+
+  web:
+    build: ./web
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
+    depends_on:
+      - api
+    command: npm run dev
+
+volumes:
+  api_data:
