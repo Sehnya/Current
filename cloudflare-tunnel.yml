@@ -1,0 +1,8 @@
+# Tunnel ID from Cloudflare dashboard
+tunnel: 4a4020a1-f274-493f-8b4b-b71a9f285175
+credentials-file: /Users/sehnya/.cloudflared/4a4020a1-f274-493f-8b4b-b71a9f285175.json
+
+ingress:
+  - hostname: current.seh-nya.com
+    service: http://localhost:80
+  - service: http_status:404

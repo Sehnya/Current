@@ -4,6 +4,7 @@ import { Search, Filter, Grid3X3 } from 'lucide-react'
 import StackCard from '../components/StackCard'
 import useSWR from 'swr'
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'
 const fetcher = (url: string) => fetch(url).then((res) => res.json())
 
 interface Stack {
@@ -43,7 +44,7 @@ export default function Stacks() {
     const [selectedCategory, setSelectedCategory] = useState('all')
     const [filteredStacks, setFilteredStacks] = useState<Stack[]>([])
 
-    const { data, error, isLoading } = useSWR('/api/stacks', fetcher)
+    const { data, error, isLoading } = useSWR(`${API_URL}/stacks`, fetcher)
 
     useEffect(() => {
         if (!data?.stacks) return
@@ -114,8 +115,8 @@ export default function Stacks() {
                             key={category}
                             onClick={() => setSelectedCategory(category)}
                             className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${selectedCategory === category
-                                    ? 'bg-current-accent text-white'
-                                    : 'bg-white/60 text-current-deep hover:bg-current-glow'
+                                ? 'bg-current-accent text-white'
+                                : 'bg-white/60 text-current-deep hover:bg-current-glow'
                                 }`}
                         >
                             {category === 'all' ? 'All' : category.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())}

@@ -14,6 +14,10 @@ RUN npm ci --only=production=false
 # Copy source code
 COPY . .
 
+# Accept build argument for API URL
+ARG NEXT_PUBLIC_API_URL
+ENV NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL
+
 # Build the application
 RUN npm run build
 

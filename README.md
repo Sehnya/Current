@@ -28,6 +28,8 @@ A beautiful, comprehensive system for tracking and discovering popular developme
 ### 🚀 Developer Experience
 
 - **Monorepo Architecture** with API + Web frontend
+- **Docker Compose** for easy local development
+- **OrbStack/Docker** optimized setup
 - **Docker Support** for easy deployment
 - **TypeScript** throughout the stack
 - **Comprehensive CLI** tools
@@ -67,25 +69,36 @@ current/
 
 ## 🚀 Quick Start
 
-### Development Setup
+### Self-Hosted Setup (Recommended)
 
-1. **Clone the repository**
+1. **Prerequisites**
+   - OrbStack (recommended) or Docker Desktop
+   - Insomnia (optional, for API testing)
+
+2. **One-Command Start**
 
    ```bash
-   git clone https://github.com/yourusername/current.git
+   git clone <your-repo-url>
    cd current
+   ./start-local.sh
    ```
 
-2. **Start with Docker Compose**
+3. **Access Your Stack**
+   - **🌐 Web App**: http://localhost:3000
+   - **🔌 API**: http://localhost:8000
+   - **📚 API Docs**: http://localhost:8000/docs
 
+4. **API Testing with Insomnia**
+   - Import `insomnia-collection.json`
+   - Pre-configured requests for all endpoints
+   - Easy testing and development
+
+5. **Stop Services**
    ```bash
-   docker-compose up -d
+   ./stop-local.sh
    ```
 
-3. **Access the applications**
-   - **Web App**: http://localhost:3000
-   - **API**: http://localhost:8000
-   - **API Docs**: http://localhost:8000/docs
+📖 **Detailed Guide**: See [SELF_HOSTING_GUIDE.md](./SELF_HOSTING_GUIDE.md) for complete setup instructions, troubleshooting, and production deployment.
 
 ### Manual Setup
 
@@ -218,11 +231,23 @@ docker-compose -f docker-compose.prod.yml up -d
 docker-compose up --scale api=2 --scale web=2
 ```
 
-### Railway/Vercel
+### Production Deployment
 
-- **API**: Deploy `app/` folder to Railway
-- **Web**: Deploy `web/` folder to Vercel
-- Set environment variables for API URL
+For production deployment, use the same Docker Compose setup on your server:
+
+```bash
+# On your production server
+git clone <your-repo>
+cd current
+
+# Set production environment variables
+export NEXT_PUBLIC_API_URL=http://your-domain.com:8000
+
+# Start services
+docker-compose up -d
+```
+
+See [SELF_HOSTING_GUIDE.md](./SELF_HOSTING_GUIDE.md) for detailed production setup instructions.
 
 ## 🤝 Contributing
 

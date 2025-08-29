@@ -44,7 +44,8 @@ export default function Search() {
         setHasSearched(true)
 
         try {
-            const response = await fetch(`/api/stacks/search?q=${encodeURIComponent(searchQuery)}`)
+            const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'
+            const response = await fetch(`${API_URL}/stacks/search?q=${encodeURIComponent(searchQuery)}`)
             const data = await response.json()
             setResults(Object.values(data.stacks || {}))
         } catch (error) {

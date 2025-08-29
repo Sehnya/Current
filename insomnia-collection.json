@@ -1,0 +1,121 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2025-08-29T19:30:00.000Z",
+  "__export_source": "insomnia.desktop.app:v2023.5.8",
+  "resources": [
+    {
+      "_id": "req_health_check",
+      "parentId": "wrk_current_api",
+      "_type": "request",
+      "name": "Health Check",
+      "description": "Check if API is running",
+      "url": "{{ _.base_url }}/ready",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1693334400000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global"
+    },
+    {
+      "_id": "req_get_stacks",
+      "parentId": "wrk_current_api",
+      "_type": "request",
+      "name": "Get All Stacks",
+      "description": "Retrieve all technology stacks",
+      "url": "{{ _.base_url }}/stacks",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1693334300000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global"
+    },
+    {
+      "_id": "req_search_stacks",
+      "parentId": "wrk_current_api",
+      "_type": "request",
+      "name": "Search Stacks",
+      "description": "Search stacks by query",
+      "url": "{{ _.base_url }}/stacks/search",
+      "method": "GET",
+      "body": {},
+      "parameters": [
+        {
+          "id": "pair_search_query",
+          "name": "q",
+          "value": "react",
+          "description": "Search query"
+        }
+      ],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1693334200000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global"
+    },
+    {
+      "_id": "req_api_docs",
+      "parentId": "wrk_current_api",
+      "_type": "request",
+      "name": "API Documentation",
+      "description": "View interactive API docs",
+      "url": "{{ _.base_url }}/docs",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1693334100000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global"
+    },
+    {
+      "_id": "env_base",
+      "parentId": "wrk_current_api",
+      "_type": "environment",
+      "name": "Base Environment",
+      "data": {
+        "base_url": "http://localhost:8000"
+      },
+      "dataPropertyOrder": {
+        "&": ["base_url"]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1693334400000
+    },
+    {
+      "_id": "wrk_current_api",
+      "_type": "workspace",
+      "name": "Current Stack API",
+      "description": "API endpoints for Current Stack application",
+      "scope": "collection"
+    }
+  ]
+}

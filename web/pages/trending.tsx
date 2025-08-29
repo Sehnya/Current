@@ -4,6 +4,7 @@ import { TrendingUp, Star, Download, GitFork } from 'lucide-react'
 import StackCard from '../components/StackCard'
 import useSWR from 'swr'
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'
 const fetcher = (url: string) => fetch(url).then((res) => res.json())
 
 interface Stack {
@@ -37,7 +38,7 @@ export default function Trending() {
     const [limit, setLimit] = useState(20)
 
     const { data, error, isLoading } = useSWR(
-        `/api/stacks/trending?sort_by=${sortBy}&limit=${limit}`,
+        `${API_URL}/stacks/trending?sort_by=${sortBy}&limit=${limit}`,
         fetcher
     )
 
@@ -81,8 +82,8 @@ export default function Trending() {
                                 key={option.value}
                                 onClick={() => setSortBy(option.value)}
                                 className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${sortBy === option.value
-                                        ? 'bg-current-accent text-white'
-                                        : 'bg-white/60 text-current-deep hover:bg-current-glow'
+                                    ? 'bg-current-accent text-white'
+                                    : 'bg-white/60 text-current-deep hover:bg-current-glow'
                                     }`}
                             >
                                 <Icon className="w-4 h-4" />
