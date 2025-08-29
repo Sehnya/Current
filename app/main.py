@@ -37,24 +37,20 @@ async def startup_event():
     """Initialize the application"""
     print("🌊 Starting Current API...")
     
+    # Initialize storage (creates empty file if needed)
     try:
-        # Load existing stacks - don't perform initial crawl on startup
+        storage.ensure_file_exists()
         existing_stacks = storage.load_stacks()
-        if not existing_stacks:
-            print("🔄 No existing data found. Will populate on first request.")
-            # Create empty storage to ensure health check passes
-            storage.save_stacks({})
-        else:
-            print(f"📚 Loaded {len(existing_stacks)} existing stacks from storage.")
+        print(f"📚 Loaded {len(existing_stacks)} existing stacks from storage.")
     except Exception as e:
         print(f"⚠️ Warning during storage initialization: {e}")
     
+    # Start scheduler (optional - don't fail if it doesn't work)
     try:
-        # Start the scheduler
         scheduler.start_scheduler()
         print("📅 Scheduler started successfully.")
     except Exception as e:
-        print(f"⚠️ Warning: Could not start scheduler: {e}")
+        print(f"⚠️ Scheduler disabled: {e}")
     
     print("✅ Current API startup complete.")
 
