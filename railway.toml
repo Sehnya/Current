@@ -5,7 +5,7 @@ name = "current"
 [[services]]
 name = "api"
 root = "app"
-start = "python run_server.py"
+start = "bash start.sh"
 
 # --- WEB service (Next.js) ---
 [[services]]
