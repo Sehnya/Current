@@ -66,9 +66,11 @@ export default function StackCard({ stack, index = 0 }: StackCardProps) {
             {/* Header */}
             <div className="flex items-start justify-between mb-4">
                 <div>
-                    <h3 className="text-xl font-bold text-current-deep group-hover:text-current-accent transition-colors">
-                        {stack.name}
-                    </h3>
+                    <Link href={`/stack/${encodeURIComponent(stack.name.toLowerCase())}`}>
+                        <h3 className="text-xl font-bold text-current-deep group-hover:text-current-accent transition-colors cursor-pointer">
+                            {stack.name}
+                        </h3>
+                    </Link>
                     <div className="flex items-center gap-2 mt-1">
                         <span className={`px-2 py-1 rounded-full text-xs font-medium ${getCategoryColor(stack.category)}`}>
                             {stack.category.replace('-', ' ')}

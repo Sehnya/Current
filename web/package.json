@@ -22,7 +22,9 @@
     "postcss": "^8.4.0",
     "lucide-react": "^0.290.0",
     "swr": "^2.2.0",
-    "framer-motion": "^10.16.0"
+    "framer-motion": "^10.16.0",
+    "chart.js": "^4.4.0",
+    "react-chartjs-2": "^5.2.0"
   },
   "devDependencies": {
     "eslint": "8.51.0",
